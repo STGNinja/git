@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="test.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    .container {
+      display: none;
+      position: absolute;
+      top: 125px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgb(174, 160, 160);
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+    }
+
+    .attributes {
+      cursor: pointer;
+      margin-top: 10px;
+      padding: 5px 10px;
+      transition: tranform 0.3 ease;
+    }
+
+    .share:hover {
+      transform: scale(1.1); /* Increase the value to zoom in further */
+  transition: transform 0.3s ease; /* Add a smooth transition */
+  color: rgb(68, 61, 61);}
+
+    .download:hover {
+      transform: scale(1.1); /* Increase the value to zoom in further */
+  transition: transform 0.3s ease; /* Add a smooth transition */
+  color: rgb(68, 61, 61);
+    }
+
+    .copy:hover {
+      transform: scale(1.1); /* Increase the value to zoom in further */
+  transition: transform 0.3s ease; /* Add a smooth transition */
+  color: rgb(68, 61, 61);
+    }
+
+    
+    
+
+
+  </style>
+</head>
+<body>
+  <span id="more" class="material-symbols-outlined" style="cursor: pointer;
+  font-size: 50px; position: absolute; top: 50%; left: 50%;">
+more_horiz
+</span>
+
+  <!-- Container with share option -->
+  <div id="container" class="container">
+    <div class="attributes">
+    <div class="share" id="shareButton">Share</div><hr>
+    <div class="download" id="downloadButton">Download</div><hr>
+    <div class="copy" id="copyButton">Copy</div>
+  </div></div>
+
+  <script>
+  document.getElementById('more').addEventListener('click', function() {
+    var container = document.getElementById('container');
+    if (container.style.display === 'block') {
+      container.style.display = 'none';
+    } else {
+      container.style.display = 'block';
+    }
+  });
+
+  document.getElementById('shareButton').addEventListener('click', function() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Shared Content Title',
+        text: 'Check out this content!',
+        url: 'https://example.com'
+      })
+      .then(() => console.log('Shared successfully'))
+      .catch(error => console.error('Error sharing:', error));
+    }
+  });
+
+  </script>
+</body>
+</html>
