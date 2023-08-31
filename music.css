@@ -1,0 +1,84 @@
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9c8787;
+    background-size: cover; /* This property ensures the image covers the entire element */
+    height: 300px; /* Adjust this value to increase or decrease the height */
+    /* Other styles for the song section */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.song h2 {
+    border-bottom: solid;
+    border-color: rgb(255, 204, 0)
+}
+.down_container {
+    background-color: rgb(190, 205, 194);
+    border-radius: 10px;
+    position: absolute;
+    top: 140px;
+    right: 430px;
+}
+
+.down_container h1 {
+    margin: 2rem;
+}
+
+.ges_down {
+    background-color: rgba(29, 126, 206, 0.4);
+    width: 100px;
+    border-radius: 12px;
+    position: relative;
+    left: 25%;
+    text-align: center;
+}
+
+.ges_down h1 {
+    padding-top: 10%;
+    padding-bottom: 10%; 
+    font-size: 15px;   
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.song {
+    width: 600px;
+    padding: 10px;
+    background-color: #b9a1a1;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
